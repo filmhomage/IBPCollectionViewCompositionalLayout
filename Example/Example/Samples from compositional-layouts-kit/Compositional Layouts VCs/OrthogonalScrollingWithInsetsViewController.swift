@@ -37,24 +37,15 @@ extension OrthogonalScrollingWithInsetsViewController {
         let layout = UICollectionViewCompositionalLayout {
             (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
 
-            let leadingItem = NSCollectionLayoutItem(
-                layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.7),
-                                                   heightDimension: .fractionalHeight(1.0)))
-            leadingItem.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-
-            let trailingItem = NSCollectionLayoutItem(
+            let item = NSCollectionLayoutItem(
                 layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                   heightDimension: .fractionalHeight(0.3)))
-            trailingItem.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-            let trailingGroup = NSCollectionLayoutGroup.vertical(
-                layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3),
-                                                   heightDimension: .fractionalHeight(1.0)),
-                subitem: trailingItem, count: 2)
+                                                   heightDimension: .fractionalHeight(1.0)))
+            item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 50, trailing: 10)
 
             let containerGroup = NSCollectionLayoutGroup.horizontal(
-                layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.85),
+                layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4),
                                                    heightDimension: .fractionalHeight(0.4)),
-                subitems: [leadingItem, trailingGroup])
+                subitems: [item])
             let section = NSCollectionLayoutSection(group: containerGroup)
             section.orthogonalScrollingBehavior = .continuous
 
@@ -103,7 +94,7 @@ extension OrthogonalScrollingWithInsetsViewController {
         // initial data
         var snapshot = NSDiffableDataSourceSnapshot<Int, Int>()
         var identifierOffset = 0
-        let itemsPerSection = 30
+        let itemsPerSection = 5
         for section in 0..<5 {
             snapshot.appendSections([section])
             let maxIdentifier = identifierOffset + itemsPerSection
