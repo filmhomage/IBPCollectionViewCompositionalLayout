@@ -25,35 +25,7 @@ extension UIImage {
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     let viewControllers: [UIViewController.Type] = [
-        ListViewController.self,
-        GridViewController.self,
-        InsetItemsGridViewController.self,
-        TwoColumnViewController.self,
-        DistinctSectionsViewController.self,
-        AdaptiveSectionsViewController.self,
-        ItemBadgeSupplementaryViewController.self,
-        SectionHeadersFootersViewController.self,
-        PinnedSectionHeaderFooterViewController.self,
-        SectionDecorationViewController.self,
-        NestedGroupsViewController.self,
-        OrthogonalScrollingViewController.self,
-        OrthogonalScrollBehaviorViewController.self,
-        ConferenceVideoSessionsViewController.self,
-        ConferenceNewsFeedViewController.self,
-        MountainsViewController.self,
-        InsertionSortViewController.self,
-        WaterfallViewController.self,
-        MosaicViewController.self,
-        TileGridViewController.self,
-        BannerTileGridViewController.self,
-        PortraitTileGridViewController.self,
-        GalleryViewController.self,
-        GroupGridViewController.self,
-        MosaicReduxViewController.self,
-        MosaicReduxViewController.self,
-        TileGalleryViewController.self,
-        TileGalleryViewController.self,
-        ShowcaseGalleryViewController.self,
+        OrthogonalScrollingWithInsetsViewController.self,
     ]
 
     lazy var collectionView: UICollectionView = {
