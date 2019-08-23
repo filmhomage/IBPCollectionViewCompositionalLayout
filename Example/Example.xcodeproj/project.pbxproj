@@ -65,6 +65,7 @@
 		149FA99C230ECB740065AD4D /* InsertionSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149FA996230ECB740065AD4D /* InsertionSortViewController.swift */; };
 		149FA99D230ECE850065AD4D /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149FA990230ECB5F0065AD4D /* LabelCell.swift */; };
 		149FA99F230ECEC90065AD4D /* InsertionSortArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149FA99E230ECEC80065AD4D /* InsertionSortArray.swift */; };
+		42CAE4ED230F6C67005F8F92 /* SupplementaryAndDecorationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CAE4EC230F6C67005F8F92 /* SupplementaryAndDecorationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -141,6 +142,7 @@
 		149FA995230ECB740065AD4D /* MountainsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MountainsViewController.swift; sourceTree = "<group>"; };
 		149FA996230ECB740065AD4D /* InsertionSortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSortViewController.swift; sourceTree = "<group>"; };
 		149FA99E230ECEC80065AD4D /* InsertionSortArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSortArray.swift; sourceTree = "<group>"; };
+		42CAE4EC230F6C67005F8F92 /* SupplementaryAndDecorationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementaryAndDecorationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 				143A2E2A22F9E2B000F8904D /* MosaicReduxViewController.swift */,
 				143A2E2822F9E2B000F8904D /* TileGalleryViewController.swift */,
 				143A2E2B22F9E2B000F8904D /* ShowcaseGalleryViewController.swift */,
+				42CAE4EC230F6C67005F8F92 /* SupplementaryAndDecorationViewController.swift */,
 			);
 			path = "Compositional Layouts VCs";
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				143A2E3E22F9E5A900F8904D /* OrthogonalScrollBehaviorViewController.swift in Sources */,
 				143A2E3422F9E2B100F8904D /* MosaicReduxViewController.swift in Sources */,
 				143A2E0522F9DF3F00F8904D /* ConferenceVideoController.swift in Sources */,
+				42CAE4ED230F6C67005F8F92 /* SupplementaryAndDecorationViewController.swift in Sources */,
 				143A2DF122F9D82300F8904D /* ConferenceVideoCell.swift in Sources */,
 				143A2E0422F9DF3F00F8904D /* ConferenceNewsController.swift in Sources */,
 				143A2E2E22F9E2B100F8904D /* WaterfallViewController.swift in Sources */,
