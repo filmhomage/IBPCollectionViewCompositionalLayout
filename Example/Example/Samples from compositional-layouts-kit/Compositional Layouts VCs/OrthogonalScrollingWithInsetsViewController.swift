@@ -15,24 +15,6 @@ class OrthogonalScrollingWithInsetsViewController: UIViewController {
 
 extension OrthogonalScrollingWithInsetsViewController {
 
-    //   +-----------------------------------------------------+
-    //   | +---------------------------------+  +-----------+  |
-    //   | |                                 |  |           |  |
-    //   | |                                 |  |           |  |
-    //   | |                                 |  |     1     |  |
-    //   | |                                 |  |           |  |
-    //   | |                                 |  |           |  |
-    //   | |                                 |  +-----------+  |
-    //   | |               0                 |                 |
-    //   | |                                 |  +-----------+  |
-    //   | |                                 |  |           |  |
-    //   | |                                 |  |           |  |
-    //   | |                                 |  |     2     |  |
-    //   | |                                 |  |           |  |
-    //   | |                                 |  |           |  |
-    //   | +---------------------------------+  +-----------+  |
-    //   +-----------------------------------------------------+
-
     func createLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout {
             (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
