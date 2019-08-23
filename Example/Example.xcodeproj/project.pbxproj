@@ -65,6 +65,7 @@
 		149FA99C230ECB740065AD4D /* InsertionSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149FA996230ECB740065AD4D /* InsertionSortViewController.swift */; };
 		149FA99D230ECE850065AD4D /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149FA990230ECB5F0065AD4D /* LabelCell.swift */; };
 		149FA99F230ECEC90065AD4D /* InsertionSortArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149FA99E230ECEC80065AD4D /* InsertionSortArray.swift */; };
+		42B2527B230F888D00F8E2E7 /* SectionHeadersFootersContentInsetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2527A230F888D00F8E2E7 /* SectionHeadersFootersContentInsetsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -141,6 +142,7 @@
 		149FA995230ECB740065AD4D /* MountainsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MountainsViewController.swift; sourceTree = "<group>"; };
 		149FA996230ECB740065AD4D /* InsertionSortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSortViewController.swift; sourceTree = "<group>"; };
 		149FA99E230ECEC80065AD4D /* InsertionSortArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSortArray.swift; sourceTree = "<group>"; };
+		42B2527A230F888D00F8E2E7 /* SectionHeadersFootersContentInsetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeadersFootersContentInsetsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 				143A2E2A22F9E2B000F8904D /* MosaicReduxViewController.swift */,
 				143A2E2822F9E2B000F8904D /* TileGalleryViewController.swift */,
 				143A2E2B22F9E2B000F8904D /* ShowcaseGalleryViewController.swift */,
+				42B2527A230F888D00F8E2E7 /* SectionHeadersFootersContentInsetsViewController.swift */,
 			);
 			path = "Compositional Layouts VCs";
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				143A2E0A22F9E02C00F8904D /* SectionDecorationViewController.swift in Sources */,
 				143A2E0F22F9E11B00F8904D /* ConferenceNewsFeedViewController.swift in Sources */,
 				143A2DEE22F9D82300F8904D /* ConferenceNewsFeedCell.swift in Sources */,
+				42B2527B230F888D00F8E2E7 /* SectionHeadersFootersContentInsetsViewController.swift in Sources */,
 				143A2E3322F9E2B100F8904D /* PortraitTileGridViewController.swift in Sources */,
 				149FA99C230ECB740065AD4D /* InsertionSortViewController.swift in Sources */,
 				143A2E3022F9E2B100F8904D /* GroupGridViewController.swift in Sources */,
