@@ -16,6 +16,24 @@
 #import "IBPNSCollectionLayoutSupplementaryItem_Private.h"
 #import "IBPUICollectionViewCompositionalLayoutConfiguration_Private.h"
 
+static const CGFloat THRESHOLD = 0.001;
+
+BOOL approximatelyEqual(CGFloat a, CGFloat b, CGFloat epsilon) {
+    return fabs(a - b) <= ( (fabs(a) < fabs(b) ? fabs(b) : fabs(a)) * epsilon);
+}
+
+BOOL essentiallyEqual(CGFloat a, CGFloat b, CGFloat epsilon) {
+    return fabs(a - b) <= ( (fabs(a) > fabs(b) ? fabs(b) : fabs(a)) * epsilon);
+}
+
+BOOL definitelyGreaterThan(CGFloat a, CGFloat b, CGFloat epsilon) {
+    return (a - b) > ( (fabs(a) < fabs(b) ? fabs(b) : fabs(a)) * epsilon);
+}
+
+BOOL definitelyLessThan(CGFloat a, CGFloat b, CGFloat epsilon) {
+    return (b - a) > ( (fabs(a) < fabs(b) ? fabs(b) : fabs(a)) * epsilon);
+}
+
 @interface IBPUICollectionViewCompositionalLayout()<UICollectionViewDelegate> {
     NSMutableDictionary<NSIndexPath *, UICollectionViewLayoutAttributes *> *cachedItemAttributes;
     NSMutableDictionary<NSString *, UICollectionViewLayoutAttributes *> *cachedSupplementaryAttributes;
@@ -341,7 +359,8 @@
                             if (attributes.representedElementCategory == UICollectionElementCategoryCell ||
                                 attributes.representedElementCategory == UICollectionElementCategoryDecorationView) {
                                 CGRect frame = attributes.frame;
-                                if (CGRectGetMinY(frame) >= CGRectGetMinY(itemFrame)) {
+                                if (definitelyGreaterThan(CGRectGetMinY(frame), CGRectGetMinY(itemFrame), THRESHOLD) ||
+                                    approximatelyEqual(CGRectGetMinY(frame), CGRectGetMinY(itemFrame), THRESHOLD)) {
                                     frame.origin.y += extendHeight;
                                     attributes.frame = frame;
                                     contentFrame = CGRectUnion(contentFrame, frame);
@@ -350,7 +369,8 @@
                         }
                         for (IBPCollectionViewOrthogonalScrollerSectionController *controller in orthogonalScrollerSectionControllers.allValues) {
                             CGRect frame = controller.scrollView.frame;
-                            if (CGRectGetMinY(frame) >= CGRectGetMinY(itemFrame)) {
+                            if (definitelyGreaterThan(CGRectGetMinY(frame), CGRectGetMinY(itemFrame), THRESHOLD) ||
+                                approximatelyEqual(CGRectGetMinY(frame), CGRectGetMinY(itemFrame), THRESHOLD)) {
                                 frame.origin.y += extendHeight;
                                 controller.scrollView.frame = frame;
                                 contentFrame = CGRectUnion(contentFrame, frame);
